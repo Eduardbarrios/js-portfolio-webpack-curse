@@ -2,7 +2,7 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtarctPlugin = require('mini-css-extract-plugin');
 const dotEnv = require('dotenv-webpack')
-
+const bundleAnalyzer = require('webpack-bundle-analyzer')
 
 module.exports = {
  entry: './src/index.js',
@@ -53,7 +53,8 @@ module.exports = {
   new miniCssExtarctPlugin({
    filename: 'assets/[name][contenthash].css'
   }), 
-  new dotEnv()
+  new dotEnv(),
+  new bundleAnalyzer(),
  ], 
 
 

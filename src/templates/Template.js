@@ -22,6 +22,7 @@ const Template = async () => {
         <div class="card_userdata">
           <ul>
             <li>${data.email}</li>
+            <li>I´m from</li>
             <li>${data.location.country}</li>
           </ul>
         </div>
